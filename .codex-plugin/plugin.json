@@ -1,0 +1,47 @@
+{
+  "name": "ziztu-drama-writer",
+  "version": "1.2.0",
+  "description": "Writes binge-worthy AI micro drama series with a hook and a cliffhanger in every episode, and produces them as video on Ziztu through the Ziztu connector. A second skill layers AI images and video in depth and fixes flat frames.",
+  "author": {
+    "name": "Ziztu",
+    "email": "support@getziztu.com",
+    "url": "https://getziztu.com"
+  },
+  "homepage": "https://getziztu.com",
+  "license": "MIT",
+  "keywords": [
+    "micro-drama",
+    "short-drama",
+    "vertical-drama",
+    "screenwriting",
+    "cliffhanger",
+    "cinematic-depth",
+    "ai-video",
+    "ziztu"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Ziztu Micro Drama Writer",
+    "shortDescription": "Write and make binge-worthy AI micro dramas",
+    "longDescription": "Turns an idea into a vertical micro drama series where every 60 to 120 second episode opens on a hook, pays something off and ends on a cliffhanger: pitches and titles, a series bible with consistent characters, a season grid, Fountain episode scripts and punch-ups, then the episodes are made as video on Ziztu (shot plan, prices, frames, clips, music, export). A second skill, Cinematic Depth, writes a soft foreground, a sharp subject and a hazy background into image and video prompts and fixes flat frames.",
+    "developerName": "Ziztu",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://getziztu.com",
+    "privacyPolicyURL": "https://getziztu.com/privacy",
+    "termsOfServiceURL": "https://getziztu.com/terms",
+    "defaultPrompt": [
+      "Use $ziztu-micro-drama to pitch three micro drama series and write the bible for the best one.",
+      "Use $ziztu-micro-drama to write episodes 1 to 3 of my series with a cliffhanger in each.",
+      "Use $ziztu-micro-drama to make episode 1 on Ziztu. Show me every price before you spend.",
+      "Use $ziztu-cinematic-depth to rewrite my shot prompt so it has a soft foreground, a sharp subject and a hazy background."
+    ],
+    "brandColor": "#F4552B",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/logo.png"
+  }
+}

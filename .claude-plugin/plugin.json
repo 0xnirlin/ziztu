@@ -1,0 +1,24 @@
+{
+  "name": "ziztu-drama-writer",
+  "version": "1.2.0",
+  "description": "Writes binge-worthy AI micro drama series (pitches, series bibles, season grids, episode scripts with a hook and a cliffhanger in every episode) and produces them as video on Ziztu through the bundled Ziztu connector. A second skill gives AI images and video real depth (soft foreground, sharp subject, hazy background) and fixes flat frames.",
+  "author": {
+    "name": "Ziztu",
+    "email": "support@getziztu.com",
+    "url": "https://getziztu.com"
+  },
+  "homepage": "https://getziztu.com",
+  "license": "MIT",
+  "keywords": [
+    "micro-drama",
+    "short-drama",
+    "vertical-drama",
+    "screenwriting",
+    "cliffhanger",
+    "cinematic-depth",
+    "prompting",
+    "ai-video",
+    "ziztu",
+    "mcp"
+  ]
+}

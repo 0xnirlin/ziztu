@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "ziztu": {
+      "type": "http",
+      "url": "https://getziztu.com/mcp",
+      "tool_timeout_sec": 180
+    }
+  }
+}

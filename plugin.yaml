@@ -1,5 +1,0 @@
-name: ziztu
-version: "1.1.0"
-description: Ziztu AI video studio. The Ziztu MCP server plans, prices and makes micro dramas and anime episodes, plus skills for micro drama series, viral reels, YouTube Shorts and TikToks, faceless YouTube videos and cinematic prompts.
-author: Ziztu
-requires_hermes: ">=0.22.0"

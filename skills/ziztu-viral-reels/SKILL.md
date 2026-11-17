@@ -262,7 +262,7 @@ Never invent a price, a result or a finished render. If you cannot open Ziztu, f
 
 ## Step 11b. Make it from the chat with Ziztu Reel Studio
 
-If the `ziztu-reel` server is connected (address `https://getziztu.com/mcp/reel`, All access plan), make the reel without leaving the chat:
+If the `ziztu-reel` server is connected (address `https://getziztu.com/mcp/reel`; any account can connect, plan and see prices, and making the reel needs the All access plan), make the reel without leaving the chat:
 
 1. Call `start_reel` with the idea, the length and the shape.
 2. Send your own board with `write_script`: the hook, every spoken line, what each scene shows and its seconds. It is used exactly as you wrote it. Show it to the user first and change it with `revise_script` until they are happy.

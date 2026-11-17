@@ -235,7 +235,7 @@ Never invent a price, a result or a finished render. If you cannot open Ziztu, f
 
 ## Step 10b. Make it from the chat with Ziztu YouTube Studio
 
-If the `ziztu-youtube` server is connected (address `https://getziztu.com/mcp/youtube`, All access plan), make the film without leaving the chat:
+If the `ziztu-youtube` server is connected (address `https://getziztu.com/mcp/youtube`; any account can connect, plan and see prices, and making the film needs the All access plan), make the film without leaving the chat:
 
 1. Write the whole script here first: about 290 to 5,000 words, about 145 words a minute, a blank line between paragraphs. Show it to the user and change it until they say yes.
 2. Call `list_films`, then `start_film` with the script. A film can also start from a topic, a YouTube link or a pasted transcript.

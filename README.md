@@ -9,7 +9,7 @@
 - **Four skills** (MIT): `ziztu-faceless-youtube` plans a faceless YouTube channel and writes its scripts, `ziztu-viral-reels` writes viral faceless reels, YouTube Shorts and TikToks, `ziztu-micro-drama` writes binge-worthy vertical micro drama series and hands them to Ziztu, and `ziztu-cinematic-depth` stages AI images and video in depth so frames stop looking flat.
 - **A portable Agent Plugin** ([`plugin.json`](plugin.json) and [`mcp.json`](mcp.json)) that bundles the MCP servers and the skills for Hermes and other clients that read the Agent Plugins format.
 
-Making a video or a reel with YouTube Studio and Reel Studio needs the All access plan. Every price is shown in credits before anything is made.
+Any Ziztu account can connect YouTube Studio and Reel Studio, plan with them, write its own script and read every price. Making the video or the reel needs the All access plan, and every price is shown in credits before anything is made.
 
 Docs: [all servers](https://getziztu.com/docs/mcp), [YouTube Studio](https://getziztu.com/docs/mcp/youtube), [Reel Studio](https://getziztu.com/docs/mcp/reel). For Claude there is also a plugin with a step by step guide: [getziztu.com/start](https://getziztu.com/start).
 

@@ -33,7 +33,7 @@ If none are present, finish the writing anyway (the scripts are the user's to ke
 | Cursor | Add `"ziztu": { "url": "https://getziztu.com/mcp" }` inside `mcpServers` in `.cursor/mcp.json`, then sign in from Cursor's MCP settings. |
 | Anything else | Step-by-step pages for each app: https://getziztu.com/connect |
 
-Every AI step uses credits: Starter is $7 a month (4,800 credits) and All access starts at $49 a month (see https://getziztu.com/pricing). For unattended agents, an API key from the Studio (Settings, API keys) can replace the browser sign-in.
+Every AI step uses credits: Starter is $20 a month (14,000 credits) and All access is $99 a month (110,000 credits) (see https://getziztu.com/pricing). For unattended agents, an API key from the Studio (Settings, API keys) can replace the browser sign-in.
 
 ## 2. The money rules
 

@@ -1,5 +1,11 @@
 {
   "mcpServers": {
+    "ziztu-youtube": {
+      "url": "https://getziztu.com/mcp/youtube"
+    },
+    "ziztu-reel": {
+      "url": "https://getziztu.com/mcp/reel"
+    },
     "ziztu": {
       "url": "https://getziztu.com/mcp"
     }

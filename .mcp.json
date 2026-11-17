@@ -1,5 +1,15 @@
 {
   "mcpServers": {
+    "ziztu-youtube": {
+      "type": "http",
+      "url": "https://getziztu.com/mcp/youtube",
+      "tool_timeout_sec": 180
+    },
+    "ziztu-reel": {
+      "type": "http",
+      "url": "https://getziztu.com/mcp/reel",
+      "tool_timeout_sec": 180
+    },
     "ziztu": {
       "type": "http",
       "url": "https://getziztu.com/mcp",

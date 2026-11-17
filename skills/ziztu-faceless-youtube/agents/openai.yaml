@@ -3,7 +3,7 @@ interface:
   short_description: "Plan a faceless YouTube channel, script videos with a hook, then make them"
   icon_small: "./assets/ziztu-mark.svg"
   icon_large: "./assets/ziztu-icon.png"
-  brand_color: "#F4552B"
+  brand_color: "#5B4DFF"
   default_prompt: "Use $ziztu-faceless-youtube to pick a niche, list video ideas, and write a chapter-by-chapter script with a hook, a title and a thumbnail brief."
 policy:
   allow_implicit_invocation: true

@@ -3,7 +3,7 @@ interface:
   short_description: "Write and make binge-worthy AI micro dramas"
   icon_small: "./assets/ziztu-mark.svg"
   icon_large: "./assets/ziztu-icon.png"
-  brand_color: "#F4552B"
+  brand_color: "#5B4DFF"
   default_prompt: "Use $ziztu-micro-drama to turn my idea into a micro drama series bible and write episode 1 with a hook and a cliffhanger."
 policy:
   allow_implicit_invocation: true

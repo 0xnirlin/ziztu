@@ -1,6 +1,14 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
   "mcpServers": {
+    "ziztu-youtube": {
+      "type": "streamable-http",
+      "url": "https://getziztu.com/mcp/youtube"
+    },
+    "ziztu-reel": {
+      "type": "streamable-http",
+      "url": "https://getziztu.com/mcp/reel"
+    },
     "ziztu": {
       "type": "streamable-http",
       "url": "https://getziztu.com/mcp"

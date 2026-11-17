@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ziztu",
-  "version": "1.1.0",
-  "description": "Ziztu AI video studio for your agent. The Ziztu MCP server plans, prices and makes micro dramas and anime episodes with the same characters in every shot, and four skills write micro drama series, viral faceless reels, YouTube Shorts and TikToks, faceless YouTube videos and cinematic image and video prompts.",
+  "version": "1.2.0",
+  "description": "Ziztu AI video studio for your agent. Ziztu YouTube Studio directs a narrated faceless YouTube video from a faceless channel script, Ziztu Reel Studio directs short reels and YouTube Shorts scene by scene, and the Ziztu MCP server makes micro dramas and anime episodes. Four skills write faceless YouTube scripts, viral reels, micro drama series and cinematic image and video prompts.",
   "author": {
     "name": "Ziztu",
     "email": "support@getziztu.com",
@@ -14,6 +14,9 @@
   "keywords": [
     "ai-video",
     "video-generation",
+    "reels",
+    "faceless-channel-script",
+    "youtube-video",
     "micro-drama",
     "anime",
     "viral-reels",
@@ -27,6 +30,14 @@
     "com.nousresearch.hermes": {
       "servers": {
         "ziztu": {
+          "trust": "untrusted",
+          "timeout": 180
+        },
+        "ziztu-youtube": {
+          "trust": "untrusted",
+          "timeout": 180
+        },
+        "ziztu-reel": {
           "trust": "untrusted",
           "timeout": 180
         }

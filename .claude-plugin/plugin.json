@@ -1,7 +1,7 @@
 {
   "name": "ziztu-drama-writer",
-  "version": "1.2.0",
-  "description": "Writes binge-worthy AI micro drama series (pitches, series bibles, season grids, episode scripts with a hook and a cliffhanger in every episode) and produces them as video on Ziztu through the bundled Ziztu connector. A second skill gives AI images and video real depth (soft foreground, sharp subject, hazy background) and fixes flat frames.",
+  "version": "1.3.0",
+  "description": "Ziztu for your agent: write a faceless YouTube channel script and make the narrated video with Ziztu YouTube Studio, direct short reels and YouTube Shorts with Ziztu Reel Studio, and write and make micro drama series with the Ziztu connector. Four skills: faceless YouTube, viral reels, micro drama and cinematic depth.",
   "author": {
     "name": "Ziztu",
     "email": "support@getziztu.com",
@@ -10,6 +10,10 @@
   "homepage": "https://getziztu.com",
   "license": "MIT",
   "keywords": [
+    "youtube-shorts",
+    "viral-reels",
+    "youtube-script",
+    "faceless-youtube",
     "micro-drama",
     "short-drama",
     "vertical-drama",

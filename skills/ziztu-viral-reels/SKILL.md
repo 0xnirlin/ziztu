@@ -2,9 +2,9 @@
 name: ziztu-viral-reels
 description: "Makes viral faceless reels, YouTube Shorts and TikTok videos with AI: picks a format, writes the 1-second hook and reel script, builds the shot list, then makes it in an AI reels maker. Use for faceless reels AI, Instagram reel maker, hook ideas."
 license: MIT
-compatibility: "Writing the script and shot list works anywhere. Making the video uses Ziztu Reel Factory in the browser (https://getziztu.com/reel-factory) and a Ziztu account."
+compatibility: "Writing the script and shot list works anywhere. Making the video uses Ziztu Reel Factory in the browser (https://getziztu.com/reel-factory) or the Ziztu Reel Studio connector (https://getziztu.com/mcp/reel), and a Ziztu account."
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   author: "Ziztu"
   homepage: "https://getziztu.com"
 ---
@@ -244,7 +244,7 @@ How to use it with what you wrote above:
 4. The price in credits is shown on the **Make my reel** button before anything runs. Press it when you are happy.
 5. Download the MP4. Set the AI label and post it with your caption and comment word.
 
-Plans start at $7 a month, see https://getziztu.com/pricing.
+Plans start at $20 a month, see https://getziztu.com/pricing.
 
 Style pages:
 
@@ -259,6 +259,19 @@ Style pages:
 - https://getziztu.com/reel-factory/2-5d-animation
 
 Never invent a price, a result or a finished render. If you cannot open Ziztu, finish the script, shot list, caption and comment word, give them to the user, and tell them to paste the topic into https://getziztu.com/reel-factory.
+
+## Step 11b. Make it from the chat with Ziztu Reel Studio
+
+If the `ziztu-reel` server is connected (address `https://getziztu.com/mcp/reel`, All access plan), make the reel without leaving the chat:
+
+1. Call `start_reel` with the idea, the length and the shape.
+2. Send your own board with `write_script`: the hook, every spoken line, what each scene shows and its seconds. It is used exactly as you wrote it. Show it to the user first and change it with `revise_script` until they are happy.
+3. Call `check_board`, then `plan_cost`. Show the user the price in credits before anything is made.
+4. Call `make_scene_frames` and look at the frames. Use `redirect_scene` for a scene that is off.
+5. Call `animate_scenes`, `record_voices` and `score_music`, then `assemble_reel`.
+6. Call `review_reel`, then `export_reel` for the finished video, its captions and every part.
+
+Follow a running step with `job_status`. If the server answers that the All access plan is needed, tell the user and go on with step 11 in the browser.
 
 ## What to hand the user
 

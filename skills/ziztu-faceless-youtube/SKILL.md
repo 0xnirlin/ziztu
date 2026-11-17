@@ -2,9 +2,9 @@
 name: ziztu-faceless-youtube
 description: "Plans and scripts a faceless YouTube channel and its videos with AI: niche, faceless YouTube video ideas, chapter-by-chapter script, hook, titles, thumbnails, AI label. Use for YouTube automation with AI or an AI YouTube video maker."
 license: MIT
-compatibility: "Planning and writing work anywhere. Making the film uses Ziztu AI YouTube Video Maker in the browser (https://getziztu.com/ai-youtube-video-maker) and a Ziztu account."
+compatibility: "Planning and writing work anywhere. Making the film uses Ziztu AI YouTube Video Maker in the browser (https://getziztu.com/ai-youtube-video-maker) or the Ziztu YouTube Studio connector (https://getziztu.com/mcp/youtube), and a Ziztu account."
 metadata:
-  version: "1.0.0"
+  version: "1.1.0"
   author: "Ziztu"
   homepage: "https://getziztu.com"
 ---
@@ -28,6 +28,7 @@ You are the producer and the writer. By the end you hand over a niche, a list of
 | Fix a boring opening | Step 3, the openers |
 | Titles and thumbnails | Step 6 |
 | To publish a finished video | Steps 7 to 9 |
+| To make the video from the chat | Step 10b (needs the Ziztu YouTube Studio connector) |
 
 When the user leaves something open, use these defaults and say them in one line:
 
@@ -222,7 +223,7 @@ How to use it with what you wrote above:
 5. Open the **publish pack**: titles, thumbnails, a description with chapters, tags, a pinned comment and an SRT file.
 6. Download the film and the pack and upload it to YouTube yourself. Set the altered or synthetic content label, check the chapters and the SRT, and publish.
 
-Plans start at $7 a month, see https://getziztu.com/pricing.
+Plans start at $20 a month, see https://getziztu.com/pricing.
 
 Read more on getziztu.com:
 
@@ -231,6 +232,20 @@ Read more on getziztu.com:
 - https://getziztu.com/blog/top-faceless-youtube-channels
 
 Never invent a price, a result or a finished render. If you cannot open Ziztu, finish the outline, the publish pack and the checklist, and tell the user to paste the idea into https://getziztu.com/ai-youtube-video-maker.
+
+## Step 10b. Make it from the chat with Ziztu YouTube Studio
+
+If the `ziztu-youtube` server is connected (address `https://getziztu.com/mcp/youtube`, All access plan), make the film without leaving the chat:
+
+1. Write the whole script here first: about 290 to 5,000 words, about 145 words a minute, a blank line between paragraphs. Show it to the user and change it until they say yes.
+2. Call `list_films`, then `start_film` with the script. A film can also start from a topic, a YouTube link or a pasted transcript.
+3. Call `plan_film` (a small price), then `edit_plan` and `edit_cast` (both free) to set your title, thesis and chapter names.
+4. Call `write_script`: for a film from your own script it sets your words into the chapters without changing one. Then `read_script`, and `edit_script` only if the user asks for a change.
+5. Call `check_story`, then `price_film`. Show the user the price in credits before anything is made.
+6. Call `make_film_part` for the look test, the narration and the pictures. Use `review_film` to look at them and `redraw_shot` for a picture that is off. Follow a running step with `film_status`.
+7. Call `edit_listing` for the title, description and tags, then `export_film`.
+
+Every step that spends credits shows its price first, and a big step asks for a second yes. If the server answers that the All access plan is needed, tell the user and go on with step 10 in the browser.
 
 ## What to hand the user
 

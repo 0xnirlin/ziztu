@@ -1,25 +1,36 @@
-# Ziztu MCP server and skills
+# Ziztu MCP servers and skills
 
-[Ziztu](https://getziztu.com) is an AI video studio for micro dramas, anime episodes, viral reels, YouTube Shorts, TikTok videos and long faceless YouTube videos. This repository holds the public pieces an agent needs to use it:
+[Ziztu](https://getziztu.com) is an AI video studio for faceless YouTube videos, reels and YouTube Shorts, micro dramas and anime episodes. This repository holds the public pieces an agent needs to use it:
 
-- **The Ziztu MCP server**, hosted at `https://getziztu.com/mcp`. Connect it and your agent can create a project, ask the Director to plan an episode, price every shot in credits, and make first frames, clips, music and the final film, with the same characters in every shot.
+- **Ziztu YouTube Studio**, hosted at `https://getziztu.com/mcp/youtube`. Your agent directs a narrated faceless YouTube video. It writes the faceless channel script chapter by chapter, or sets your own finished script into the chapters word for word. It checks the story, prices the film in credits, shows you the pictures before any motion is paid for, writes the listing and exports the film with its thumbnails, captions and chapter list.
+- **Ziztu Reel Studio**, hosted at `https://getziztu.com/mcp/reel`. Your agent directs a short reel or YouTube Short scene by scene: the script and the scene board, a frame for every scene to look at before paying for motion, the voices, the music, the cut and the export.
+- **The Ziztu MCP server**, hosted at `https://getziztu.com/mcp`. Your agent can create a project, ask the Director to plan a micro drama or anime episode, price every shot in credits, and make first frames, clips, music and the final film, with the same characters in every shot. It also has a screenplay script writer.
 - **Ziztu Planner**, a smaller server at `https://getziztu.com/mcp/planner` that plans episodes, writes scripts, loglines and shot lists, and prices each step. It makes no images or video.
-- **Four skills** (MIT): `ziztu-viral-reels` writes viral faceless reels, YouTube Shorts and TikToks, `ziztu-faceless-youtube` plans and scripts faceless YouTube videos, `ziztu-micro-drama` writes binge-worthy vertical micro drama series and hands them to Ziztu, and `ziztu-cinematic-depth` stages AI images and video in depth so frames stop looking flat.
-- **A portable Agent Plugin** ([`plugin.json`](plugin.json) and [`mcp.json`](mcp.json)) that bundles the MCP server and the skills for Hermes and other clients that read the Agent Plugins format.
+- **Four skills** (MIT): `ziztu-faceless-youtube` plans a faceless YouTube channel and writes its scripts, `ziztu-viral-reels` writes viral faceless reels, YouTube Shorts and TikToks, `ziztu-micro-drama` writes binge-worthy vertical micro drama series and hands them to Ziztu, and `ziztu-cinematic-depth` stages AI images and video in depth so frames stop looking flat.
+- **A portable Agent Plugin** ([`plugin.json`](plugin.json) and [`mcp.json`](mcp.json)) that bundles the MCP servers and the skills for Hermes and other clients that read the Agent Plugins format.
 
-Full docs: [getziztu.com/docs/mcp](https://getziztu.com/docs/mcp)
+Making a video or a reel with YouTube Studio and Reel Studio needs the All access plan. Every price is shown in credits before anything is made.
 
-## Connect the MCP server
+Docs: [all servers](https://getziztu.com/docs/mcp), [YouTube Studio](https://getziztu.com/docs/mcp/youtube), [Reel Studio](https://getziztu.com/docs/mcp/reel). For Claude there is also a plugin with a step by step guide: [getziztu.com/start](https://getziztu.com/start).
 
-Both servers use OAuth. Add the address, sign in to Ziztu when the client asks, and approve the screen that opens. No install and no key.
+## Connect the MCP servers
+
+All four servers use OAuth. Add the address you want, sign in to Ziztu when the client asks, and approve the screen that opens. No install and no key.
+
+| Server | Address |
+| --- | --- |
+| Ziztu YouTube Studio | `https://getziztu.com/mcp/youtube` |
+| Ziztu Reel Studio | `https://getziztu.com/mcp/reel` |
+| Ziztu (micro dramas, anime, screenplays) | `https://getziztu.com/mcp` |
+| Ziztu Planner | `https://getziztu.com/mcp/planner` |
 
 | Client | How to add it |
 | --- | --- |
-| Claude (claude.ai, Desktop, mobile) | Customize, Connectors, Add custom connector, paste `https://getziztu.com/mcp`, then Connect. |
-| Claude Code | `claude mcp add --transport http ziztu https://getziztu.com/mcp`, then `/mcp` to sign in. |
+| Claude (claude.ai, Desktop, mobile) | Customize, Connectors, Add custom connector, paste the address, then Connect. |
+| Claude Code | `claude mcp add --transport http ziztu-youtube https://getziztu.com/mcp/youtube`, then `/mcp` to sign in. Use the names `ziztu-reel` and `ziztu` for the other two addresses. |
 | Cursor | Copy [`.cursor/mcp.json`](.cursor/mcp.json) into your project's `.cursor/mcp.json`, then sign in when Cursor asks. |
 | Hermes Agent | `hermes plugins install 0xnirlin/ziztu`, then `hermes plugins enable ziztu`, and sign in when Hermes asks. |
-| Codex | `codex mcp add ziztu --url https://getziztu.com/mcp` |
+| Codex | `codex mcp add ziztu-youtube --url https://getziztu.com/mcp/youtube` |
 | ChatGPT | Add a custom MCP server in the apps settings (developer mode) and choose OAuth. |
 | Grok | grok.com/connectors, New Connector, Custom, paste the address. |
 
@@ -33,13 +44,13 @@ Ziztu works on credits. Every paid step shows its price in credits before it run
 
 The skills live in [`skills/`](skills). Each folder has a `SKILL.md`.
 
-- Claude Code: install this repository as a plugin (it bundles both skills and the MCP server), or copy a skill folder into `~/.claude/skills/`.
+- Claude Code: install this repository as a plugin (it bundles the four skills and the MCP servers), or copy a skill folder into `~/.claude/skills/`.
 - Codex and other agents that read skills: copy a skill folder into your agent's skills directory.
 - Any agent that supports skills.sh: `npx skills add 0xnirlin/ziztu`.
 
-`ziztu-viral-reels` picks a proven reel format, writes a 1 second hook and a Paradox, Escalation, Pivot, Payoff script, and builds the shot list for a faceless reel, YouTube Short or TikTok. Then it makes the reel in [Reel Factory](https://getziztu.com/reel-factory), the AI reel maker: one topic in, one vertical MP4 out with a voice, word captions and music.
+`ziztu-viral-reels` picks a proven reel format, writes a 1 second hook and a Paradox, Escalation, Pivot, Payoff script, and builds the shot list for a faceless reel, YouTube Short or TikTok. Then it makes the reel in [Reel Factory](https://getziztu.com/reel-factory), the AI reel maker: one topic in, one vertical MP4 out with a voice, word captions and music. With Ziztu Reel Studio connected, the agent makes the reel from the chat instead.
 
-`ziztu-faceless-youtube` picks a niche, studies how a working video is built without copying it, and writes a chapter by chapter script, titles and thumbnail ideas for a faceless YouTube channel. Then it makes the film in the [AI YouTube Video Maker](https://getziztu.com/ai-youtube-video-maker): a narrated video of 2 to 60 minutes in one look.
+`ziztu-faceless-youtube` picks a niche, studies how a working video is built without copying it, and writes a chapter by chapter script, titles and thumbnail ideas for a faceless YouTube channel. Then it makes the film in the [AI YouTube Video Maker](https://getziztu.com/ai-youtube-video-maker): a narrated video of 2 to 60 minutes in one look. With Ziztu YouTube Studio connected, the agent starts the film from the finished script in the chat.
 
 `ziztu-micro-drama` writes pitches, series bibles, season grids and Fountain episode scripts with a hook and a cliffhanger in every episode. Writing needs no Ziztu account. With the MCP server connected it imports each episode, plans the shots and shows the price before anything is made.
 
